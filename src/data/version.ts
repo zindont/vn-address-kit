@@ -11,7 +11,7 @@ export function getDataVersion(): DataVersion {
     version: "sample-2026.06.20",
     sample: true,
     lastUpdatedAt: "2026-06-20",
-    description: "Development-only sample dataset for vn-address-kit MVP.",
+    description: "Sample dataset for tests, examples, and package integration. Not official administrative data.",
     sources: ["Sample data created for tests and examples. Not official administrative data."]
   };
 }

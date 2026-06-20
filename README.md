@@ -1,6 +1,6 @@
 # vn-address-kit
 
-[![npm version](https://img.shields.io/badge/npm-0.1.0-blue.svg)](#) [![build](https://img.shields.io/badge/build-sample--mvp-yellow.svg)](#)
+[![npm version](https://img.shields.io/npm/v/vn-address-kit.svg)](https://www.npmjs.com/package/vn-address-kit) [![CI](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > Vietnam address migration toolkit for the 2025 two-level administrative reform.
 
@@ -9,6 +9,10 @@
 ## What It Solves
 
 Many systems still store addresses as `street, ward, district, province`, while the newer model removes the district level. This package provides deterministic APIs and CLI tools for migration workflows with confidence scoring, warnings, strategies, and candidates for audit.
+
+## Release Status
+
+`vn-address-kit` is published as a stable open-source package with a documented API, CLI, tests, release checklist, and community files. The bundled dataset is intentionally small and sample-only until verified official administrative data is imported.
 
 ## Installation
 
@@ -20,8 +24,7 @@ For local development:
 
 ```bash
 npm install
-npm test
-npm run build
+npm run release:check
 ```
 
 ## Quick Start
@@ -99,6 +102,22 @@ This project starts with sample data for development. Do not use the sample data
 
 The initial repository uses sample data for development. Replace `src/data/sample/*.json` with verified official data before production use.
 
+## Open Source Standards
+
+- [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Support](SUPPORT.md)
+- [Release Process](RELEASE.md)
+
+## Documentation
+
+- [API Reference](docs/api.md)
+- [CLI Usage](docs/cli.md)
+- [Data Sources](docs/data-sources.md)
+- [Confidence Strategy](docs/confidence.md)
+- [Limitations](docs/limitations.md)
+
 ## Limitations
 
 - Sample data covers only a few Khánh Hòa, Hà Nội, and TP. Hồ Chí Minh examples.
@@ -116,7 +135,7 @@ The initial repository uses sample data for development. Replace `src/data/sampl
 
 ## Contributing
 
-Contributions are welcome. Please include tests for data, parsing, matching, and CLI behavior. Official data imports should include source documentation and changelog entries.
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Official data imports should include source documentation and changelog entries.
 
 ## License
 

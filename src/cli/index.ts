@@ -10,7 +10,7 @@ const program = new Command();
 program
   .name("vn-address")
   .description("Vietnam address migration toolkit CLI")
-  .version("0.1.0");
+  .version("1.0.0");
 
 program.command("version").description("Print package and data version").action(runVersion);
 

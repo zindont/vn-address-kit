@@ -5,11 +5,11 @@ import { getDataVersion } from "../../data/version";
 
 export function runVersion(): void {
   const packagePath = join(dirname(fileURLToPath(import.meta.url)), "../../package.json");
-  let packageVersion = "0.1.0";
+  let packageVersion = "1.0.0";
   try {
     packageVersion = JSON.parse(readFileSync(packagePath, "utf8")).version ?? packageVersion;
   } catch {
-    packageVersion = "0.1.0";
+    packageVersion = "1.0.0";
   }
   const data = getDataVersion();
   console.log(`vn-address-kit ${packageVersion}`);

@@ -1,7 +1,7 @@
 {
   "name": "vn-address-kit",
-  "version": "0.1.0",
-  "description": "Vietnam address migration toolkit for the 2025 two-level administrative reform.",
+  "version": "1.0.0",
+  "description": "Production-ready TypeScript toolkit for Vietnam administrative address search, validation, normalization, conversion, and CSV migration.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -11,9 +11,15 @@
   },
   "files": [
     "dist",
+    "docs",
+    "examples",
     "README.md",
     "LICENSE",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+    "SUPPORT.md"
   ],
   "scripts": {
     "build": "tsup",
@@ -22,7 +28,10 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "audit": "npm audit",
+    "release:check": "npm run typecheck && npm test && npm run build && npm audit && npm pack --dry-run",
+    "prepublishOnly": "npm run release:check"
   },
   "keywords": [
     "vietnam",
@@ -31,7 +40,7 @@
     "migration",
     "typescript"
   ],
-  "author": "",
+  "author": "vn-address-kit contributors",
   "license": "MIT",
   "engines": {
     "node": ">=18"
@@ -43,9 +52,29 @@
     "@types/node": "^20.14.10",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3",
-    "vitest": "^4.1.9"
+    "vitest": "^3.2.6"
   },
   "overrides": {
+    "vite": "^6.4.3",
     "esbuild": "^0.28.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zindont/vn-address-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zindont/vn-address-kit/issues"
+  },
+  "homepage": "https://github.com/zindont/vn-address-kit#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
   }
 }
