@@ -4,7 +4,9 @@
 
 > Vietnam address migration toolkit for the 2025 two-level administrative reform.
 
-`vn-address-kit` là toolkit TypeScript-first giúp developer Việt Nam chuẩn hóa, tìm kiếm, validate và migrate địa chỉ hành chính từ mô hình cũ 3 cấp sang mô hình mới 2 cấp.
+**Languages:** English | [Tiếng Việt](README.vi.md)
+
+`vn-address-kit` is a TypeScript-first toolkit for normalizing, searching, validating, converting, and migrating Vietnamese administrative addresses from the legacy three-level model to the 2025 two-level model.
 
 ## What It Solves
 
@@ -12,7 +14,7 @@ Many systems still store addresses as `street, ward, district, province`, while 
 
 ## Release Status
 
-`vn-address-kit` is published as a stable open-source package with a documented API, CLI, tests, release checklist, and community files. It bundles the **official 2025 two-level administrative dataset** (34 provinces / 3,321 wards), generated from the national conversion table per Quyết định 19/2025/QĐ-TTg and reconciled to official totals.
+`vn-address-kit` is published as a stable open-source package with a documented API, CLI, tests, release checklist, and community files. It bundles the official 2025 two-level administrative dataset: 34 provinces and 3,321 wards. The dataset is generated from the national conversion table under Quyết định 19/2025/QĐ-TTg and reconciled to official totals.
 
 ## Installation
 
@@ -45,14 +47,6 @@ npx vn-address-kit@latest version
 npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json
 npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
 npx vn-address-kit@latest search province "khanh hoa"
-```
-
-Before the npm package is published, you can run from GitHub:
-
-```bash
-npx github:zindont/vn-address-kit version
-npx github:zindont/vn-address-kit convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json
-npx github:zindont/vn-address-kit convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
 ```
 
 ## Convert Address Text
@@ -113,14 +107,22 @@ vn-address search ward "loc tho" --province 56
 
 ## Confidence Score
 
-Results include `confidence` from `0` to `1`, a `strategy`, `warnings`, and `candidates`. High confidence means exact or normalized mapping; lower confidence means fuzzy/candidate-only output that should be reviewed.
+Results include `confidence` from `0` to `1`, a `strategy`, `warnings`, and `candidates`. High confidence means an exact or deterministic mapping; lower confidence means fuzzy or candidate-only output that should be reviewed.
 
 ## Data Source
 
-The bundled dataset in `src/data/official/*.json` is generated from the official national conversion
-table (Quyết định 19/2025/QĐ-TTg + 34 Nghị quyết UBTVQH; Tổng cục Thống kê). Regenerate it with
-`npm run build:data`. For legally critical use, re-verify against `danhmuchanhchinh.nso.gov.vn`. See
-[Data Sources](docs/data-sources.md).
+The bundled dataset in `src/data/official/*.json` is generated from official national conversion files under Quyết định 19/2025/QĐ-TTg, National Assembly Standing Committee resolutions, and General Statistics Office reconciliation tables. Regenerate it with `npm run build:data`. For legally critical use, re-verify against `danhmuchanhchinh.nso.gov.vn`. See [Data Sources](docs/explanation/data-sources.md).
+
+## Documentation
+
+- [Documentation Index](docs/README.md)
+- [Getting Started](docs/tutorials/getting-started.md)
+- [How-To: Migrate a CSV File](docs/how-to/migrate-csv.md)
+- [Reference: API](docs/reference/api.md)
+- [Reference: CLI](docs/reference/cli.md)
+- [Explanation: Confidence And Strategies](docs/explanation/confidence.md)
+- [Explanation: Data Sources](docs/explanation/data-sources.md)
+- [Documentation Language Policy](docs/language-policy.md)
 
 ## Open Source Standards
 
@@ -130,33 +132,24 @@ table (Quyết định 19/2025/QĐ-TTg + 34 Nghị quyết UBTVQH; Tổng cục 
 - [Support](SUPPORT.md)
 - [Release Process](RELEASE.md)
 
-## Documentation
-
-- [API Reference](docs/api.md)
-- [CLI Usage](docs/cli.md)
-- [Run With npx](docs/npx.md)
-- [Data Sources](docs/data-sources.md)
-- [Confidence Strategy](docs/confidence.md)
-- [Limitations](docs/limitations.md)
-
 ## Limitations
 
-- Dataset reconciles to official 2025 totals (34 provinces / 3,321 wards), but re-verify for legally critical use.
+- The dataset reconciles to official 2025 totals, but legally critical workflows should still verify against official state sources.
 - Free-text parsing is practical but not exhaustive.
 - Ambiguous or low-confidence results are not forced into a single answer.
-- This package does not guarantee legal correctness until verified official data is imported.
+- OCR errors, incomplete addresses, and historical edge cases may require manual review.
 
 ## Roadmap
 
-- Import verified official administrative datasets.
-- Add richer mapping types for merge/split cases.
-- Improve OCR typo handling and benchmarks.
-- Add Excel and JSON migration helpers.
+- Expand data quality checks and reproducible source validation.
+- Improve OCR typo handling and benchmark coverage.
+- Add richer JSON and Excel migration helpers.
 - Publish a browser playground.
+- Add more localized documentation when the API stabilizes further.
 
 ## Contributing
 
-Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Official data imports should include source documentation and changelog entries.
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Data changes should include source documentation, validation notes, and changelog entries.
 
 ## License
 

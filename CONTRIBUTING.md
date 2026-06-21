@@ -19,6 +19,7 @@ npm run release:check
 - Keep runtime dependencies small and justified.
 - Do not add unverified administrative data as if it were official.
 - Document any new data source, mapping rule, or confidence strategy.
+- Follow [the documentation language policy](docs/language-policy.md): English is canonical, Vietnamese user-facing docs should live in dedicated localized files.
 
 ## Data Contributions
 

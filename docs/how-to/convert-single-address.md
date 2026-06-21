@@ -1,0 +1,66 @@
+# Convert A Single Address
+
+Use this guide when you need to convert one legacy address into the current two-level model.
+
+## Convert Free Text
+
+```ts
+import { convertAddressText } from "vn-address-kit";
+
+const result = convertAddressText(
+  "123 Lê Lợi, Phường Lộc Thọ, TP Nha Trang, Khánh Hòa"
+);
+
+if (result.success) {
+  console.log(result.newAddress);
+} else {
+  console.log(result.warnings);
+  console.log(result.candidates);
+}
+```
+
+Free-text conversion is convenient when you receive addresses from forms, OCR, customer data, CRM exports, or support tickets. The parser reads comma-separated text from right to left: province, district, ward, then street address.
+
+## Convert Structured Fields
+
+```ts
+import { convertOldToNew } from "vn-address-kit";
+
+const result = convertOldToNew({
+  province: "Khánh Hòa",
+  district: "Nha Trang",
+  ward: "Lộc Thọ",
+  streetAddress: "123 Lê Lợi"
+});
+```
+
+Structured input is more reliable than free text because each field already has a known role.
+
+## Decide What To Do With The Result
+
+```ts
+if (result.success && result.confidence >= 0.9) {
+  // Auto-accept in a migration pipeline.
+} else if (result.candidates.length > 0) {
+  // Send candidates to a manual review queue.
+} else {
+  // Keep the original address and ask for correction.
+}
+```
+
+Suggested thresholds depend on your domain. For legally critical workflows, review all migrated records even when confidence is high.
+
+## Preserve Audit Fields
+
+Store at least these fields with your migrated record:
+
+- `success`
+- `confidence`
+- `strategy`
+- `warnings`
+- `candidates`
+- `oldAddress`
+- `newAddress`
+- original input
+
+These fields make later auditing and rollback easier.
