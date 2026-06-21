@@ -49,6 +49,10 @@ npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Ho
 npx vn-address-kit@latest search province "khanh hoa"
 ```
 
+## Playground trên trình duyệt
+
+Thử toolkit trực tiếp trên trình duyệt: [vn-address-kit Playground](https://zindont.github.io/vn-address-kit/).
+
 ## Chuyển đổi địa chỉ dạng text
 
 ```ts

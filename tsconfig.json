@@ -22,6 +22,7 @@
     "tests",
     "examples",
     "tsup.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "playground"
   ]
 }

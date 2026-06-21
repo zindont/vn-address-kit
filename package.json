@@ -34,7 +34,10 @@
     "prepare": "npm run build",
     "audit": "npm audit",
     "release:check": "npm run typecheck && npm test && npm run build && npm audit && npm pack --dry-run",
-    "prepublishOnly": "npm run release:check"
+    "prepublishOnly": "npm run release:check",
+    "playground:dev": "vite --config playground/vite.config.ts --host 127.0.0.1",
+    "playground:build": "vite build --config playground/vite.config.ts",
+    "playground:preview": "vite preview --config playground/vite.config.ts --host 127.0.0.1"
   },
   "keywords": [
     "vietnam",
@@ -55,6 +58,7 @@
     "@types/node": "^20.14.10",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3",
+    "vite": "^6.4.3",
     "vitest": "^3.2.6"
   },
   "overrides": {
