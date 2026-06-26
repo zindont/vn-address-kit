@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/vn-address-kit/",
   resolve: {
     alias: {
-      "vn-address-kit": fileURLToPath(new URL("../src/index.ts", import.meta.url))
+      "vietnam-address-kit": fileURLToPath(new URL("../src/index.ts", import.meta.url))
     }
   },
   build: {

@@ -5,7 +5,7 @@ Use this guide when you need to convert one legacy address into the current two-
 ## Convert Free Text
 
 ```ts
-import { convertAddressText } from "vn-address-kit";
+import { convertAddressText } from "vietnam-address-kit";
 
 const result = convertAddressText(
   "123 Lê Lợi, Phường Lộc Thọ, TP Nha Trang, Khánh Hòa"
@@ -24,7 +24,7 @@ Free-text conversion is convenient when you receive addresses from forms, OCR, c
 ## Convert Structured Fields
 
 ```ts
-import { convertOldToNew } from "vn-address-kit";
+import { convertOldToNew } from "vietnam-address-kit";
 
 const result = convertOldToNew({
   province: "Khánh Hòa",

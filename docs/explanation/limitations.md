@@ -1,6 +1,6 @@
 # Limitations
 
-`vn-address-kit` is designed for deterministic migration workflows, but it cannot remove every data-quality risk.
+`vietnam-address-kit` is designed for deterministic migration workflows, but it cannot remove every data-quality risk.
 
 ## Data Limits
 

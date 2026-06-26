@@ -1,12 +1,12 @@
-# vn-address-kit
+# vietnam-address-kit
 
-[![npm version](https://img.shields.io/npm/v/vn-address-kit.svg)](https://www.npmjs.com/package/vn-address-kit) [![CI](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/vietnam-address-kit.svg)](https://www.npmjs.com/package/vietnam-address-kit) [![CI](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/zindont/vn-address-kit/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > Bộ công cụ chuyển đổi địa chỉ hành chính Việt Nam cho mô hình 2 cấp năm 2025.
 
 **Ngôn ngữ:** [English](README.md) | Tiếng Việt
 
-`vn-address-kit` là bộ công cụ TypeScript-first giúp chuẩn hóa, tìm kiếm, kiểm tra, chuyển đổi và migrate địa chỉ hành chính Việt Nam từ mô hình cũ 3 cấp sang mô hình mới 2 cấp năm 2025.
+`vietnam-address-kit` là bộ công cụ TypeScript-first giúp chuẩn hóa, tìm kiếm, kiểm tra, chuyển đổi và migrate địa chỉ hành chính Việt Nam từ mô hình cũ 3 cấp sang mô hình mới 2 cấp năm 2025.
 
 ## Dự án giải quyết gì?
 
@@ -14,12 +14,20 @@ Nhiều hệ thống vẫn lưu địa chỉ theo dạng `số nhà/đường, p
 
 ## Trạng thái phát hành
 
-`vn-address-kit` đã được phát hành như một package mã nguồn mở ổn định, có API, CLI, bộ kiểm thử, checklist phát hành và các file cộng đồng. Package được đóng gói kèm bộ dữ liệu hành chính 2 cấp chính thức năm 2025 gồm 34 tỉnh/thành và 3.321 xã/phường/đặc khu. Bộ dữ liệu được sinh từ bảng chuyển đổi quốc gia theo Quyết định 19/2025/QĐ-TTg và được đối chiếu với tổng số chính thức.
+`vietnam-address-kit` đã được phát hành như một package mã nguồn mở ổn định, có API, CLI, bộ kiểm thử, checklist phát hành và các file cộng đồng. Package được đóng gói kèm bộ dữ liệu hành chính 2 cấp chính thức năm 2025 gồm 34 tỉnh/thành và 3.321 xã/phường/đặc khu. Bộ dữ liệu được sinh từ bảng chuyển đổi quốc gia theo Quyết định 19/2025/QĐ-TTg và được đối chiếu với tổng số chính thức.
+
+Package trước đây được phát hành với tên `vn-address-kit`. Với cài đặt mới, hãy dùng `vietnam-address-kit`; CLI vẫn giữ alias `vn-address-kit` và `vn-address` để tương thích.
+
+## Link public
+
+- NPM package: [https://www.npmjs.com/package/vietnam-address-kit](https://www.npmjs.com/package/vietnam-address-kit)
+- Browser playground: [https://zindont.github.io/vn-address-kit/](https://zindont.github.io/vn-address-kit/)
+- GitHub repository: [https://github.com/zindont/vn-address-kit](https://github.com/zindont/vn-address-kit)
 
 ## Cài đặt
 
 ```bash
-npm install vn-address-kit
+npm install vietnam-address-kit
 ```
 
 Dành cho phát triển cục bộ:
@@ -32,7 +40,7 @@ npm run release:check
 ## Bắt đầu nhanh
 
 ```ts
-import { convertAddressText } from "vn-address-kit";
+import { convertAddressText } from "vietnam-address-kit";
 
 const result = convertAddressText("123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa");
 console.log(result.newAddress, result.confidence);
@@ -43,20 +51,20 @@ console.log(result.newAddress, result.confidence);
 Dùng `npx` cho các tác vụ nhanh trong terminal:
 
 ```bash
-npx vn-address-kit@latest version
-npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json
-npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
-npx vn-address-kit@latest search province "khanh hoa"
+npx vietnam-address-kit@latest version
+npx vietnam-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json
+npx vietnam-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
+npx vietnam-address-kit@latest search province "khanh hoa"
 ```
 
 ## Playground trên trình duyệt
 
-Thử toolkit trực tiếp trên trình duyệt: [vn-address-kit Playground](https://zindont.github.io/vn-address-kit/).
+Thử toolkit trực tiếp trên trình duyệt: [vietnam-address-kit Playground](https://zindont.github.io/vn-address-kit/).
 
 ## Chuyển đổi địa chỉ dạng text
 
 ```ts
-import { convertAddressText } from "vn-address-kit";
+import { convertAddressText } from "vietnam-address-kit";
 
 convertAddressText("123 Lê Lợi, Phường Lộc Thọ, TP Nha Trang, Khánh Hòa");
 ```
@@ -64,7 +72,7 @@ convertAddressText("123 Lê Lợi, Phường Lộc Thọ, TP Nha Trang, Khánh H
 ## Chuyển đổi địa chỉ có cấu trúc
 
 ```ts
-import { convertOldToNew } from "vn-address-kit";
+import { convertOldToNew } from "vietnam-address-kit";
 
 convertOldToNew({
   province: "Khánh Hòa",
@@ -77,7 +85,7 @@ convertOldToNew({
 ## Tìm kiếm tỉnh/xã
 
 ```ts
-import { searchProvince, searchWard } from "vn-address-kit";
+import { searchProvince, searchWard } from "vietnam-address-kit";
 
 searchProvince("khanh hoa");
 searchWard("loc tho", { provinceCode: "56" });
@@ -86,7 +94,7 @@ searchWard("loc tho", { provinceCode: "56" });
 ## Validate quan hệ tỉnh/xã
 
 ```ts
-import { validateHierarchy } from "vn-address-kit";
+import { validateHierarchy } from "vietnam-address-kit";
 
 validateHierarchy({ provinceCode: "56", wardCode: "56001" });
 ```

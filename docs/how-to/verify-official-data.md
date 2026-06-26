@@ -5,7 +5,7 @@ Use this guide when you are reviewing a data update or preparing a legally sensi
 ## Check The Data Version
 
 ```ts
-import { getDataVersion } from "vn-address-kit";
+import { getDataVersion } from "vietnam-address-kit";
 
 console.log(getDataVersion());
 ```

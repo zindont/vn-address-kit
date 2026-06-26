@@ -4,13 +4,14 @@ import { runConvert } from "./commands/convert";
 import { runMigrate } from "./commands/migrate";
 import { runSearch } from "./commands/search";
 import { runVersion } from "./commands/version";
+import { PACKAGE_VERSION } from "../package-version";
 
 const program = new Command();
 
 program
-  .name("vn-address")
+  .name("vietnam-address-kit")
   .description("Vietnam address migration toolkit CLI")
-  .version("1.0.0");
+  .version(PACKAGE_VERSION);
 
 program.command("version").description("Print package and data version").action(runVersion);
 

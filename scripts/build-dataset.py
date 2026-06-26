@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build:data — Generate the official vn-address-kit dataset from the authoritative
+build:data — Generate the official vietnam-address-kit dataset from the authoritative
 conversion table (QĐ 19/2025/QĐ-TTg). See docs/adr/0001 and docs/adr/0002.
 
 Source : data/source/conversion-table.xlsx  (sheet "Tổng hợp_không merge", flat 1-row-per-edge)

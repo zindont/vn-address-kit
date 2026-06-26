@@ -12,7 +12,7 @@ This tutorial gets you from zero to a successful address conversion in a few min
 Use `npx` for a one-off conversion:
 
 ```bash
-npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
+npx vietnam-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
 ```
 
 You should see a JSON result with:
@@ -26,13 +26,13 @@ You should see a JSON result with:
 ## 2. Install The Package
 
 ```bash
-npm install vn-address-kit
+npm install vietnam-address-kit
 ```
 
 ## 3. Convert Text In TypeScript
 
 ```ts
-import { convertAddressText } from "vn-address-kit";
+import { convertAddressText } from "vietnam-address-kit";
 
 const result = convertAddressText(
   "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa"
@@ -48,7 +48,7 @@ console.log(result.confidence);
 Use structured input when your system already stores province, district, ward, and street fields separately.
 
 ```ts
-import { convertOldToNew } from "vn-address-kit";
+import { convertOldToNew } from "vietnam-address-kit";
 
 const result = convertOldToNew({
   province: "Khánh Hòa",
@@ -63,7 +63,7 @@ console.log(result);
 ## 5. Search And Validate
 
 ```ts
-import { searchProvince, searchWard, validateHierarchy } from "vn-address-kit";
+import { searchProvince, searchWard, validateHierarchy } from "vietnam-address-kit";
 
 console.log(searchProvince("khanh hoa"));
 console.log(searchWard("loc tho", { provinceCode: "56" }));

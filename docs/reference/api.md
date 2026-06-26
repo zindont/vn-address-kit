@@ -3,7 +3,7 @@
 All public APIs are exported from the package root.
 
 ```ts
-import { convertAddressText, searchProvince } from "vn-address-kit";
+import { convertAddressText, searchProvince } from "vietnam-address-kit";
 ```
 
 ## Data Version

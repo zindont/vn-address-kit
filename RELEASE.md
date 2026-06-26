@@ -1,6 +1,6 @@
 # Release Process
 
-This document describes the release checklist for `vn-address-kit`.
+This document describes the release checklist for `vietnam-address-kit`.
 
 ## Pre-release Checklist
 
@@ -11,7 +11,7 @@ node dist/cli/index.js version
 node dist/cli/index.js convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json
 node dist/cli/index.js search province "khanh hoa"
 npm pack --pack-destination /tmp
-npx --yes --package /tmp/vn-address-kit-*.tgz vn-address-kit version
+npx --yes --package /tmp/vietnam-address-kit-*.tgz vietnam-address-kit version
 ```
 
 Confirm:

@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.1 - 2026-06-26
+
+### Fixed
+
+- Fixed the CLI `--version` output so it uses `package.json` instead of a hardcoded version.
+
+### Changed
+
+- Renamed the npm package from `vn-address-kit` to `vietnam-address-kit` for better npm and Google discoverability.
+- Added the `vietnam-address-kit` CLI binary while keeping the legacy `vn-address-kit` and short `vn-address` aliases.
+- Added npm-focused package keywords for address parsing, conversion, administrative units, CSV migration, and the 2025 reform.
+- Added direct public links to npm, GitHub, and the browser playground in both English and Vietnamese READMEs.
+
 ## 1.1.0 - 2026-06-21
 
 ### Added

@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Security fixes are prioritized for the latest released version of `vn-address-kit`.
+Security fixes are prioritized for the latest released version of `vietnam-address-kit`.
 
 ## Reporting a Vulnerability
 

@@ -13,7 +13,7 @@ id,name,address
 ## Chạy migrate
 
 ```bash
-npx vn-address-kit@latest migrate customers.csv \
+npx vietnam-address-kit@latest migrate customers.csv \
   --address-column address \
   --out customers.migrated.csv \
   --report report.json

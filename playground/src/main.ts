@@ -10,7 +10,7 @@ import {
   validateHierarchy,
   type ConversionResult,
   type StructuredOldAddressInput
-} from "vn-address-kit";
+} from "vietnam-address-kit";
 import "./styles.css";
 
 const dataVersion = getDataVersion();
@@ -66,13 +66,13 @@ function appHtml(): string {
       <div class="hero-inner">
         <div class="hero-content">
           <p class="eyebrow">Interactive browser playground</p>
-          <h1>vn-address-kit</h1>
+          <h1>vietnam-address-kit</h1>
           <p class="hero-copy">
             Try Vietnam administrative address conversion, search, validation, confidence scoring,
             warnings, and candidates using the bundled official 2025 two-level dataset.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://www.npmjs.com/package/vn-address-kit" target="_blank" rel="noreferrer">npm package</a>
+            <a class="button button-primary" href="https://www.npmjs.com/package/vietnam-address-kit" target="_blank" rel="noreferrer">npm package</a>
             <a class="button" href="https://github.com/zindont/vn-address-kit" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>

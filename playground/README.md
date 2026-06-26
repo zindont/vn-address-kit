@@ -1,6 +1,6 @@
-# vn-address-kit Playground
+# vietnam-address-kit Playground
 
-Interactive static playground for trying `vn-address-kit` in a browser.
+Interactive static playground for trying `vietnam-address-kit` in a browser.
 
 ## Local Development
 

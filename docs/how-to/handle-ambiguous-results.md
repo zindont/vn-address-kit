@@ -1,6 +1,6 @@
 # Handle Ambiguous Results
 
-`vn-address-kit` intentionally avoids forcing a single answer when input is ambiguous.
+`vietnam-address-kit` intentionally avoids forcing a single answer when input is ambiguous.
 
 ## Detect Ambiguity
 

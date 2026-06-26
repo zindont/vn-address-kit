@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { parseCsv, stringifyCsv } from "../src/cli/utils/csv";
 import { formatConversionResult } from "../src/cli/utils/output";
 import { convertAddressText } from "../src";
+import packageJson from "../package.json";
+import { PACKAGE_VERSION } from "../src/package-version";
 
 describe("cli utils", () => {
   it("parses quoted commas in CSV", () => {
@@ -16,5 +18,9 @@ describe("cli utils", () => {
   it("formats conversion output", () => {
     const text = formatConversionResult(convertAddressText("123 Le Loi, P Vinh Hoa, TP Nha Trang, Khanh Hoa"));
     expect(text).toContain("Success: true");
+  });
+
+  it("uses package.json as the CLI version source", () => {
+    expect(PACKAGE_VERSION).toBe(packageJson.version);
   });
 });

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-`vn-address-kit` is a TypeScript-first library + CLI for Vietnam's 2025 two-level administrative reform: it converts/searches/validates addresses from the legacy **3-level** model (`province → district → ward`) to the new **2-level** model (`province → ward`, district removed). Every conversion is deterministic and auditable — results carry a `confidence` score, a `strategy`, `warnings`, and `candidates` rather than forcing a single answer.
+`vietnam-address-kit` is a TypeScript-first library + CLI for Vietnam's 2025 two-level administrative reform: it converts/searches/validates addresses from the legacy **3-level** model (`province → district → ward`) to the new **2-level** model (`province → ward`, district removed). Every conversion is deterministic and auditable — results carry a `confidence` score, a `strategy`, `warnings`, and `candidates` rather than forcing a single answer.
 
 ## Commands
 

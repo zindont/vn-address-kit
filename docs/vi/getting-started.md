@@ -1,6 +1,6 @@
 # Bắt đầu nhanh
 
-Tài liệu này giúp bạn chạy `vn-address-kit` trong vài phút.
+Tài liệu này giúp bạn chạy `vietnam-address-kit` trong vài phút.
 
 ## Yêu cầu
 
@@ -10,7 +10,7 @@ Tài liệu này giúp bạn chạy `vn-address-kit` trong vài phút.
 ## 1. Chạy bằng npx
 
 ```bash
-npx vn-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
+npx vietnam-address-kit@latest convert "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa" --json --pretty
 ```
 
 Kết quả JSON sẽ có:
@@ -24,13 +24,13 @@ Kết quả JSON sẽ có:
 ## 2. Cài package
 
 ```bash
-npm install vn-address-kit
+npm install vietnam-address-kit
 ```
 
 ## 3. Chuyển đổi địa chỉ dạng text
 
 ```ts
-import { convertAddressText } from "vn-address-kit";
+import { convertAddressText } from "vietnam-address-kit";
 
 const result = convertAddressText(
   "123 Le Loi, P Loc Tho, TP Nha Trang, Khanh Hoa"
@@ -43,7 +43,7 @@ console.log(result.confidence);
 ## 4. Chuyển đổi dữ liệu có cấu trúc
 
 ```ts
-import { convertOldToNew } from "vn-address-kit";
+import { convertOldToNew } from "vietnam-address-kit";
 
 const result = convertOldToNew({
   province: "Khánh Hòa",

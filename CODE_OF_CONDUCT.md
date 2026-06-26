@@ -1,6 +1,6 @@
 # Code of Conduct
 
-`vn-address-kit` is an open-source project for developers working with Vietnam address data. We want the community to be respectful, practical, and welcoming.
+`vietnam-address-kit` is an open-source project for developers working with Vietnam address data. We want the community to be respectful, practical, and welcoming.
 
 ## Expected Behavior
 

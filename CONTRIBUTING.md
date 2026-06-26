@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve `vn-address-kit`. This project aims to be a reliable open-source toolkit for Vietnam administrative address workflows.
+Thank you for helping improve `vietnam-address-kit`. This project aims to be a reliable open-source toolkit for Vietnam administrative address workflows.
 
 ## Development Setup
 

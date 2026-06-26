@@ -1,12 +1,13 @@
 {
-  "name": "vn-address-kit",
-  "version": "1.1.0",
+  "name": "vietnam-address-kit",
+  "version": "1.1.1",
   "description": "Production-ready TypeScript toolkit for Vietnam administrative address search, validation, normalization, conversion, and CSV migration.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
+    "vietnam-address-kit": "dist/cli/index.js",
     "vn-address-kit": "dist/cli/index.js",
     "vn-address": "dist/cli/index.js"
   },
@@ -41,12 +42,20 @@
   },
   "keywords": [
     "vietnam",
+    "vietnam-address",
+    "vietnamese-address",
     "address",
+    "address-parser",
+    "address-converter",
     "administrative",
+    "administrative-units",
     "migration",
+    "csv-migration",
+    "gso",
+    "2025-reform",
     "typescript"
   ],
-  "author": "vn-address-kit contributors",
+  "author": "vietnam-address-kit contributors",
   "license": "MIT",
   "engines": {
     "node": ">=18"

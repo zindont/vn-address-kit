@@ -1,6 +1,6 @@
 # Documentation Language Policy
 
-`vn-address-kit` serves Vietnamese address workflows but should remain easy for international open-source contributors to review.
+`vietnam-address-kit` serves Vietnamese address workflows but should remain easy for international open-source contributors to review.
 
 ## Canonical Language
 

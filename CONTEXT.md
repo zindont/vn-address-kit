@@ -1,6 +1,6 @@
 # CONTEXT — Ubiquitous Language
 
-Glossary for `vn-address-kit`. Terms only — no implementation details.
+Glossary for `vietnam-address-kit`. Terms only — no implementation details.
 
 ## Administrative model
 

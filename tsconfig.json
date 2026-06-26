@@ -12,7 +12,7 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
-      "vn-address-kit": [
+      "vietnam-address-kit": [
         "./src/index.ts"
       ]
     }

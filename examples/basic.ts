@@ -3,7 +3,7 @@ import {
   convertOldToNew,
   searchProvince,
   validateHierarchy,
-} from "vn-address-kit";
+} from "vietnam-address-kit";
 
 console.log(searchProvince("khanh hoa"));
 
